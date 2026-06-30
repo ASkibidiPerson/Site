@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glazed Addon</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,sans-serif}
+body{background:#0a0a12;color:#e0e0f0;min-height:100vh}
+.wrap{max-width:1200px;margin:0 auto;padding:20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid #2a2a4a}
+.logo{font-size:28px;font-weight:800;background:linear-gradient(135deg,#c084fc,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav a{color:#a0a0c0;text-decoration:none;margin-left:25px;font-size:14px;transition:.3s}
+.nav a:hover{color:#c084fc}
+.hero{text-align:center;padding:60px 0 40px}
+.hero h1{font-size:52px;font-weight:900;background:linear-gradient(135deg,#c084fc,#60a5fa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:20px;color:#a0a0c0;margin:15px 0;max-width:600px;margin-left:auto;margin-right:auto}
+.badge{display:inline-block;background:rgba(192,132,252,.15);padding:8px 20px;border-radius:30px;border:1px solid rgba(192,132,252,.3);margin:10px 5px;font-size:14px}
+.btn{display:inline-block;background:linear-gradient(135deg,#c084fc,#7c3aed);color:#fff;padding:14px 40px;border-radius:50px;text-decoration:none;font-weight:600;margin-top:20px;transition:.3s}
+.btn:hover{transform:scale(1.05);box-shadow:0 0 30px rgba(124,58,237,.4)}
+.btn-github{background:linear-gradient(135deg,#6e5494,#2b1a3a)}
+section{padding:40px 0}
+h2{font-size:32px;font-weight:700;margin-bottom:25px;background:linear-gradient(135deg,#c084fc,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:30px 0}
+.cat-card{background:#12121f;padding:20px;border-radius:16px;border:1px solid #1e1e3a;transition:.3s}
+.cat-card:hover{border-color:#c084fc;transform:translateY(-4px)}
+.cat-card h3{color:#c084fc;font-size:20px;margin-bottom:10px}
+.cat-card ul{list-style:none;font-size:14px;color:#b0b0d0;line-height:2}
+.cat-card ul li::before{content:"▸";color:#60a5fa;margin-right:8px}
+.search{width:100%;padding:14px 20px;border-radius:12px;border:1px solid #1e1e3a;background:#12121f;color:#e0e0f0;font-size:16px;margin:20px 0}
+.search:focus{outline:none;border-color:#c084fc}
+table{width:100%;border-collapse:collapse;background:#12121f;border-radius:16px;overflow:hidden}
+th{background:#1a1a30;padding:12px;text-align:left;color:#c084fc;font-weight:600}
+td{padding:12px;border-bottom:1px solid #1a1a2a;font-size:14px}
+tr:hover{background:#1a1a2e}
+.faq-item{background:#12121f;margin:10px 0;border-radius:12px;border:1px solid #1a1a2a;overflow:hidden}
+.faq-q{padding:16px 20px;cursor:pointer;font-weight:600;display:flex;justify-content:space-between;color:#c084fc}
+.faq-q:hover{background:#1a1a2e}
+.faq-a{padding:0 20px 20px;color:#b0b0d0;line-height:1.8;display:none}
+.faq-a.active{display:block}
+.changelog{display:grid;gap:15px}
+.changelog-item{background:#12121f;padding:15px 20px;border-radius:12px;border-left:3px solid #c084fc;font-size:14px}
+.changelog-item strong{color:#c084fc}
+footer{text-align:center;padding:40px 0;border-top:1px solid #1a1a2a;color:#707090;font-size:14px;margin-top:40px}
+footer a{color:#c084fc;text-decoration:none}
+@media(max-width:768px){.hero h1{font-size:32px}.nav a{margin:0 10px;font-size:12px}.cat-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="logo">🍩 GLAZED</div>
+<div class="nav">
+<a href="#features">Features</a>
+<a href="#modules">Modules</a>
+<a href="#faq">FAQ</a>
+<a href="#changelog">Updates</a>
+<a href="https://github.com/ASkibidiPerson/GlazedAddon/releases/" target="_blank" style="color:#c084fc">GitHub</a>
+</div>
+</header>
+
+<div class="hero">
+<h1>Free Meteor Client Addon</h1>
+<p>Automate boring tasks on DonutSMP with 78 modules across 3 categories — completely free & open source.</p>
+<div>
+<span class="badge">78 Modules</span>
+<span class="badge">3 Categories</span>
+<span class="badge">1.21.4 - 1.21.11</span>
+</div>
+<a href="https://github.com/ASkibidiPerson/GlazedAddon/releases/download/oii/GlazedAddon.jar" class="btn" download>⬇ Download Now</a>
+<a href="https://github.com/ASkibidiPerson/GlazedAddon/releases/" class="btn btn-github" target="_blank">⭐ View on GitHub</a>
+<p style="margin-top:15px;font-size:14px;color:#707090">by ASkibidiPerson</p>
+</div>
+
+<section id="features">
+<h2>⚡ Module Categories</h2>
+<div class="cat-grid">
+<div class="cat-card">
+<h3>🛠 Main (39)</h3>
+<ul><li>AH Sell · AH Sniper · Auto Order · Auto Pearl Chain</li><li>Auto Sell · Auto Tree Farmer · Coord Snapper</li><li>Crate Buyer · Emergency Seller · Freecam Mining</li><li>Home Reset · No Block Interact · Player Detection</li><li>Premium Tunnel Base Finder · RTP Base Finder</li><li>Shop Buyer · Storage Stealer · Tab Detector</li><li>TPA Macro · UI Helper + 19 more</li></ul>
+</div>
+<div class="cat-card">
+<h3>👁 ESP (27)</h3>
+<ul><li>1x1x1 Holes · Advanced Stash Finder</li><li>Bedrock Void ESP · Beehive ESP · Block Notifier</li><li>Chunk Finder · Cluster Finder · Collectible ESP</li><li>Covered Hole · Deepslate ESP · Dripstone ESP</li><li>Fake Scoreboard · Invis ESP · Kelp ESP</li><li>Light ESP · Llama ESP · Pillager ESP · Piston ESP</li><li>Region Map · Skeleton ESP · Spawner Notifier</li><li>Sweet Berry ESP · Villager ESP · Vine ESP · Wandering ESP + 3 more</li></ul>
+</div>
+<div class="cat-card">
+<h3>⚔ PvP (13)</h3>
+<ul><li>Aim Assist (Grim AC v3 bypass) · Anchor Macro</li><li>Anti Trap · Auto Double Hand · Auto Inv Totem</li><li>Breach Swap · Crystal Macro · Double Anchor Macro</li><li>Hover Totem · Key Pearl · Shield Breaker</li><li>Sword Place Obsidian · Wind Pearl Macro</li></ul>
+</div>
+</div>
+</section>
+
+<section id="modules">
+<h2>📋 Module Directory</h2>
+<input class="search" id="moduleSearch" placeholder="🔍 Search modules...">
+<div style="overflow-x:auto;margin-top:15px">
+<table id="moduleTable">
+<thead><tr><th>Name</th><th>Category</th><th>Description</th></tr></thead>
+<tbody id="moduleBody"></tbody>
+</table>
+</div>
+</section>
+
+<section id="recommendations">
+<h2>🔗 Recommended Pairings</h2>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:15px 0">
+<span class="badge" style="background:#1a1a30">Auto Replenish</span>
+<span class="badge" style="background:#1a1a30">Auto Eat</span>
+<span class="badge" style="background:#1a1a30">Fast Place</span>
+<span class="badge" style="background:#1a1a30">Auto Tool</span>
+<span class="badge" style="background:#1a1a30">Freecam</span>
+<span class="badge" style="background:#1a1a30">Storage ESP</span>
+<span class="badge" style="background:#1a1a30">Tracers</span>
+</div>
+</section>
+
+<section id="faq">
+<h2>❓ FAQ</h2>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is Glazed? <span>+</span></div><div class="faq-a">Free Meteor addon for DonutSMP with 78 modules. Automates boring tasks and provides high-quality tools for free.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which versions work? <span>+</span></div><div class="faq-a">Minecraft 1.21.4, 1.21.10, and 1.21.11.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is it really free? <span>+</span></div><div class="faq-a">Yes — completely open source. No paid version exists.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Will I get banned? <span>+</span></div><div class="faq-a">v16.1 includes bypass for Donut autobans. Use at your own risk.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How to install? <span>+</span></div><div class="faq-a">Download .jar from GitHub releases, place in Meteor Client's 'addons' folder, launch Minecraft.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Best modules to start? <span>+</span></div><div class="faq-a">Auto Tree Farmer, AH Sniper, Premium Tunnel Base Finder, Aim Assist — pair with Auto Replenish & Auto Eat.</div></div>
+</section>
+
+<section id="changelog">
+<h2>📰 Changelog</h2>
+<div class="changelog">
+<div class="changelog-item"><strong>v16.1</strong> — Spawner Protect fix, Order Sniper faster w/ shulker, AHSniper AutoResell, AdminList, Donuts autoban bypass.</div>
+<div class="changelog-item"><strong>v16</strong> — Breach Swap updated, Region Map fix, FreeCam Mining fix, Premium Tunnel Base Finder, AutoTreeFarmer.</div>
+<div class="changelog-item"><strong>v15</strong> — LightESP, InvisESP, AutoDoubleHand, Storage Stealer, Shield Breaker added.</div>
+<div class="changelog-item"><strong>v14</strong> — UIHelper, BedrockVoidESP, ShieldBreaker, AutoXP, NoBlockInteract, BeehiveESP, FastExp, WindPearlMacro.</div>
+<div class="changelog-item"><strong>v12</strong> — Undetected Tree Farmer rework, RTP Biomes, Block Notifier, Advanced StashFinder.</div>
+<div class="changelog-item"><strong>v11</strong> — PvP Category added, Undetected Tunneler, Player Detection Whitelist, ShopBuyer.</div>
+</div>
+</section>
+
+<footer>
+<p>🍩 Glazed Addon — Created by <a href="https://github.com/ASkibidiPerson" target="_blank">ASkibidiPerson</a> · Open Source</p>
+<p style="margin-top:10px">Download: <a href="https://github.com/ASkibidiPerson/GlazedAddon/releases/download/oii/GlazedAddon.jar" target="_blank">GlazedAddon.jar</a> · <a href="https://github.com/ASkibidiPerson/GlazedAddon/releases/" target="_blank">GitHub Releases</a></p>
+<p style="margin-top:10px;font-size:12px;color:#505070">Not affiliated with DonutSMP or Meteor Client</p>
+</footer>
+</div>
+
+<script>
+const modules = [
+["AH Sell","Main","Auction house selling automation"],
+["AH Sniper","Main","Snipe auction house listings"],
+["Auto Order","Main","Auto place orders"],
+["Auto Pearl Chain","Main","Chain ender pearl throws"],
+["Auto Sell","Main","Auto sell items to shops"],
+["Auto Tree Farmer","Main","Auto chop trees"],
+["Coord Snapper","Main","Snap & share coordinates"],
+["Crate Buyer","Main","Auto buy crates"],
+["Emergency Seller","Main","Sell items when low"],
+["Freecam Mining","Main","Mine while in freecam"],
+["Home Reset","Main","Reset home position"],
+["No Block Interact","Main","Prevent block interactions"],
+["Player Detection","Main","Detect nearby players"],
+["Premium Tunnel Base Finder","Main","Find tunnel bases"],
+["RTP Base Finder","Main","Find RTP bases"],
+["Shop Buyer","Main","Auto buy from shops"],
+["Storage Stealer","Main","Steal from storage"],
+["Tab Detector","Main","Detect tab list changes"],
+["TPA Macro","Main","TPA request macro"],
+["UI Helper","Main","UI enhancements"],
+["1x1x1 Holes","ESP","Find 1x1 holes"],
+["Advanced Stash Finder","ESP","Find hidden stashes"],
+["Bedrock Void ESP","ESP","Highlight bedrock voids"],
+["Beehive ESP","ESP","Highlight bee hives"],
+["Block Notifier","ESP","Notify on block changes"],
+["Chunk Finder","ESP","Find chunk borders"],
+["Cluster Finder","ESP","Find cluster of blocks"],
+["Collectible ESP","ESP","Highlight collectibles"],
+["Covered Hole","ESP","Find covered holes"],
+["Deepslate ESP","ESP","Highlight deepslate"],
+["Dripstone ESP","ESP","Highlight dripstone"],
+["Fake Scoreboard","ESP","Detect fake scoreboards"],
+["Invis ESP","ESP","Highlight invisible entities"],
+["Kelp ESP","ESP","Highlight kelp"],
+["Light ESP","ESP","Highlight light levels"],
+["Llama ESP","ESP","Highlight llamas"],
+["Pillager ESP","ESP","Highlight pillagers"],
+["Piston ESP","ESP","Highlight pistons"],
+["Region Map","ESP","Map regions"],
+["Skeleton ESP","ESP","Highlight skeletons"],
+["Spawner Notifier","ESP","Notify on spawners"],
+["Sweet Berry ESP","ESP","Highlight berries"],
+["Villager ESP","ESP","Highlight villagers"],
+["Vine ESP","ESP","Highlight vines"],
+["Wandering ESP","ESP","Highlight wandering traders"],
+["Aim Assist","PvP","Grim AC v3 bypass aim assist"],
+["Anchor Macro","PvP","Anchor macro"],
+["Anti Trap","PvP","Prevent being trapped"],
+["Auto Double Hand","PvP","Auto swap to offhand"],
+["Auto Inv Totem","PvP","Auto inventory totem"],
+["Breach Swap","PvP","Breach crystal swap"],
+["Crystal Macro","PvP","Crystal placement macro"],
+["Double Anchor Macro","PvP","Double anchor macro"],
+["Hover Totem","PvP","Totem hover"],
+["Key Pearl","PvP","Keybind pearl"],
+["Shield Breaker","PvP","Break shields"],
+["Sword Place Obsidian","PvP","Place obsidian with sword"],
+["Wind Pearl Macro","PvP","Wind charge + pearl macro"]
+];
+
+function renderModules(filter=""){
+const body=document.getElementById("moduleBody");
+body.innerHTML="";
+modules.filter(m=>m[0].toLowerCase().includes(filter.toLowerCase())||m[1].toLowerCase().includes(filter.toLowerCase())||m[2].toLowerCase().includes(filter.toLowerCase()))
+.forEach(m=>{
+const tr=document.createElement("tr");
+tr.innerHTML=`<td><strong>${m[0]}</strong></td><td><span style="color:#60a5fa">${m[1]}</span></td><td style="color:#b0b0d0">${m[2]}</td>`;
+body.appendChild(tr);
+});
+}
+document.getElementById("moduleSearch").addEventListener("input",e=>renderModules(e.target.value));
+renderModules();
+
+function toggleFaq(el){
+const answer=el.nextElementSibling;
+answer.classList.toggle("active");
+el.querySelector("span").textContent=answer.classList.contains("active")?"−":"+";
+}
+</script>
+</body>
+</html>
